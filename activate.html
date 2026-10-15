@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Активация аккаунта | Доска объявлений</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <div class="logo">Board</div>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="category.html">Категории</a>
+            <a href="about.html">О сайте</a>
+            <span id="authLinks"></span>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="activate-box">
+            <h2>Активация аккаунта</h2>
+            <p>Введите код, полученный при регистрации</p>
+            <input type="text" id="activationCode" placeholder="Код активации (6 символов)" maxlength="6">
+            <button onclick="activateAccount()">Активировать</button>
+            <p class="info-text">Если вы не получили код, проверьте email или зарегистрируйтесь заново</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script> 
+    <script>// Автоматически подставляем код из URL в поле ввода
+const urlParams = new URLSearchParams(window.location.search);
+const codeFromUrl = urlParams.get('code');
+if (codeFromUrl) {
+    const input = document.getElementById('activationCode');
+    if (input) input.value = codeFromUrl;
+    showNotification('Код активации автоматически вставлен', 'info', 'Осталось нажать кнопку');
+}</script>
+</body>
+</html>

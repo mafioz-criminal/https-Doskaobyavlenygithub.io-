@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль | Доска объявлений</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Board</div>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="category.html">Категории</a>
+            <a href="about.html">О сайте</a>
+            <span id="authLinks"></span>
+        </nav>
+    </header>
+
+    <main class="profile-container">
+        <div class="profile-header">
+            <h1>Личный кабинет</h1>
+        </div>
+
+        <div class="profile-content">
+            <!-- Левая колонка -->
+            <div class="profile-sidebar">
+                <div class="profile-card">
+                    <div class="profile-avatar">
+                        <img src="https://via.placeholder.com/100" alt="Аватар" id="avatarImg">
+                        <div class="avatar-overlay">
+                            <button class="avatar-edit" onclick="changePhoto()">📷</button>
+                        </div>
+                    </div>
+                    <h2 class="profile-name" id="profileName">Загрузка...</h2>
+                    <div class="profile-rating">★ 4.8 · 15 отзывов</div>
+                    <div class="profile-status" id="profileStatus">Загрузка...</div>
+                    <div class="profile-actions">
+                        <button class="btn-outline" onclick="editProfile()">✏️ Редактировать профиль</button>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <h3>Контакты</h3>
+                    <div class="contact-item">
+                        <span class="contact-label">Email:</span>
+                        <span class="contact-value" id="profileEmail">Загрузка...</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Телефон:</span>
+                        <span class="contact-value" id="profilePhone">+7 (999) 123-45-67</span>
+                        <button class="btn-small" onclick="editPhone()">Изменить</button>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Город:</span>
+                        <span class="contact-value" id="profileCity">Москва</span>
+                        <button class="btn-small" onclick="editCity()">Изменить</button>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <h3>Настройки</h3>
+                    <div class="settings-menu">
+                        <a href="#" class="settings-link" onclick="changePassword()">🔒 Сменить пароль</a>
+                        <a href="#" class="settings-link" onclick="notifications()">🔔 Уведомления</a>
+                        <a href="#" class="settings-link" onclick="security()">🛡️ Безопасность</a>
+                        <a href="#" class="settings-link delete-account" onclick="deleteAccount()">🗑️ Удалить аккаунт</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Правая колонка -->
+            <div class="profile-main">
+                <div class="profile-tabs">
+                    <button class="tab active" onclick="switchTab('Мои объявления')">Мои объявления</button>
+                    <button class="tab" onclick="switchTab('Избранное')">Избранное</button>
+                    <button class="tab" onclick="switchTab('История')">История</button>
+                </div>
+
+                <div class="add-ad-section">
+                    <button class="btn-primary" onclick="addNewAd()">+ Подать объявление</button>
+                </div>
+
+                <div class="ads-grid" id="adsGrid">
+                    <div class="no-ads-card">Загрузка объявлений...</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Модальное окно смены пароля -->
+    <div id="passwordModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h3>Смена пароля</h3>
+            <input type="password" id="oldPass" placeholder="Старый пароль">
+            <input type="password" id="newPass" placeholder="Новый пароль">
+            <input type="password" id="confirmPass" placeholder="Подтвердите пароль">
+            <div class="modal-buttons">
+                <button class="btn-primary" onclick="updatePassword()">Сохранить</button>
+                <button class="btn-secondary" onclick="closeModal()">Отмена</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно редактирования профиля -->
+    <div id="editProfileModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h3>Редактировать профиль</h3>
+            <input type="text" id="editUsername" placeholder="Имя пользователя">
+            <input type="text" id="editCity" placeholder="Город">
+            <input type="text" id="editPhone" placeholder="Телефон">
+            <div class="modal-buttons">
+                <button class="btn-primary" onclick="saveProfileEdit()">Сохранить</button>
+                <button class="btn-secondary" onclick="closeModal()">Отмена</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация | Доска объявлений</title> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Board</div>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="category.html">Категории</a>
+            <a href="about.html">О сайте</a>
+            <span id="authLinks"></span>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <div class="register-box">
+            <h2>Регистрация</h2> 
+            
+<input type="text" id="username" placeholder="Имя пользователя">
+<div id="usernameError" class="error-message" style="color: red; font-size: 12px; display: none;"></div>
+
+<input type="email" id="email" placeholder="Email" onblur="validateEmailField()">
+<div id="emailError" class="error-message" style="color: red; font-size: 12px; display: none;"></div>
+
+<input type="password" id="password" placeholder="Пароль" oninput="checkPasswordStrength(this.value)">
+<div id="passwordStrength" style="font-size: 12px; margin-top: 5px;"></div>
+
+<input type="password" id="passwordtwo" placeholder="Повторите пароль">
+<div id="passwordRepeatError" class="error-message" style="color: red; font-size: 12px; display: none;"></div>
+            <p class="text-center">
+                Уже есть аккаунт? <a href="login.html">Войти</a>
+            </p>
+        </div> 
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+<link rel="preconnect" href="https://tanki-media-content.tanki.su">
+<link rel="preconnect" href="https://ptl-ru-cdn.tanki.su">
