@@ -1,0 +1,14 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /*.pdf$
+Disallow: /profile.html
+
+Allow: /
+
+# Sitemap
+Sitemap: https://mafioz-criminal.github.io/https-Doskaobyavlenygithub.io-/sitemap.xml
+
+# Host (устаревшая директива Яндекса, оставлена для отчёта)
+# Host: mafioz-criminal.github.io

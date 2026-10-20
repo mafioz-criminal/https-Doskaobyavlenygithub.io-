@@ -331,7 +331,11 @@ function renderAdsGrid(adsList, page) {
                             <div class="ad-category-badge">
                                 <span>${categoryIcon}</span> ${ad.category || 'Без категории'}
                             </div>
-                            <img src="${ad.image || 'https://via.placeholder.com/300x200'}" alt="${ad.title}">
+                            <img src="${ad.image || 'images/placeholder-300x200.webp'}" 
+                            alt="${ad.title}" 
+                            loading="lazy" 
+                            width="300" 
+                            height="200">
                         </div>
                         <div class="ad-content">
                             <h3 class="ad-title">${ad.title}</h3>
@@ -513,7 +517,11 @@ function renderAdsWithPagination(adsList, page) {
                             <div class="ad-category-badge">
                                 <span>${categoryIcon}</span> ${ad.category || 'Без категории'}
                             </div>
-                            <img src="${ad.image || 'https://via.placeholder.com/200x150'}" alt="${ad.title}">
+                            <img src="${ad.image || 'images/placeholder-200x150.webp'}" 
+                            alt="${ad.title}" 
+                            loading="lazy" 
+                            width="300" 
+                            height="200">
                         </div>
                         <div class="ad-content">
                             <h3 class="ad-title">${ad.title}</h3>
@@ -638,7 +646,11 @@ function createProfileAdCard(ad) {
                 <div class="ad-category-badge">
                     <span>${categoryIcon}</span> ${ad.category || 'Без категории'}
                 </div>
-                <img src="${ad.image || 'https://via.placeholder.com/200x150'}" alt="${ad.title}">
+                <img src="${ad.image || 'images/placeholder-200x150.webp'}" 
+                alt="${ad.title}" 
+                loading="lazy" 
+                width="300" 
+                height="200">
             </div>
             <div class="ad-content">
                 <h3 class="ad-title">${ad.title}</h3>
@@ -970,7 +982,7 @@ function saveNewAd() {
         category: document.getElementById('category')?.value || '',
         price: document.getElementById('price')?.value || '',
         description: document.getElementById('description')?.value || '',
-        image: document.getElementById('image')?.value || 'https://via.placeholder.com/200x150',
+        image: document.getElementById('image')?.value || 'images/placeholder-300x200.webp',
         phone: document.getElementById('phone')?.value || 'Не указан',
         date: new Date().toLocaleString('ru'),
         views: 0,
@@ -1063,7 +1075,13 @@ function loadAdDetail() {
 
     adDetail.innerHTML = `
         <div class="ad-detail-card">
-            <img src="${ad.image || 'https://via.placeholder.com/800x400'}" alt="${ad.title}" class="ad-detail-image">
+        <img src="${ad.image || 'images/placeholder-800x400.webp'}" 
+        alt="${ad.title}" 
+            class="ad-detail-image" 
+            loading="eager" 
+            fetchpriority="high" 
+            width="800" 
+            height="400">
             <div class="ad-detail-content">
                 <div style="display: flex; justify-content: space-between; align-items: center;">
                     <h1 class="ad-detail-title">${ad.title}</h1>
@@ -1260,7 +1278,7 @@ function saveAdChanges() {
         category: document.getElementById('category').value,
         price: document.getElementById('price').value,
         description: document.getElementById('description').value,
-        image: document.getElementById('image').value || 'https://via.placeholder.com/200x150',
+        image: document.getElementById('image').value || 'images/placeholder-300x200.webp',
         phone: document.getElementById('phone').value || 'Не указан',
         editedAt: new Date().toLocaleString('ru')
     };

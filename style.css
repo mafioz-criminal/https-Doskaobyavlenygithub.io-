@@ -1,6 +1,21 @@
 /* ============================================
 ОБЩИЕ СТИЛИ (для всех страниц)
    ============================================ */
+/* --- Начало блока для устранения CLS --- */
+img { 
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+}
+.ad-image { 
+    aspect-ratio: 3 / 2; 
+}
+.ad-detail-image { 
+    aspect-ratio: 2 / 1; 
+}
+.profile-avatar { 
+    aspect-ratio: 1 / 1; 
+}
 
 * {
     margin: 0;

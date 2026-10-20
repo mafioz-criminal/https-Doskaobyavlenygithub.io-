@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-  *{margin:0;padding:0;box-sizing:border-box}
-body{background:#f0f2f5;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#222}
-header{background:#fff;padding:15px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #e5e7eb}
-.container{max-width:1400px;margin:30px auto;padding:0 20px}
-.btn-primary{background:#00aaff;color:#fff;padding:12px 20px;border:none;border-radius:8px}
-img{max-width:100%;height:auto;display:block}
-</style>
+    <!-- SEO: страница закрыта от индексации -->
+    <title>Личный кабинет — мои объявления | Board</title>
+    <meta name="description" content="Личный кабинет на доске объявлений Board. Управляйте объявлениями, редактируйте профиль, смотрите избранное.">
+    <meta name="robots" content="noindex, nofollow">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png">
 
-<link rel="preload" href="style.min.css" as="style">
-<link rel="stylesheet" href="style.min.css" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="style.min.css"></noscript>
+    <!-- Стили -->
+    <link rel="preload"  href="style.css" as="style">
+    <link rel="stylesheet"  href="style.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet"  href="style.css"></noscript>
 
-
-<script src="script.min.js" defer></script>
-
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
         <div class="logo">Board</div>
-        <nav>
-            <a href="index.html">Главная</a>
-            <a href="category.html">Категории</a>
-            <a href="about.html">О сайте</a>
+        <nav aria-label="Основная навигация">
+            <a href="index.html" title="Доска объявлений Board — главная">Главная</a>
+            <a href="category.html" title="Все категории объявлений в Воронеже">Категории</a>
+            <a href="about.html" title="О проекте Board — доска объявлений">О сайте</a>
             <span id="authLinks"></span>
         </nav>
     </header>
@@ -41,9 +40,9 @@ img{max-width:100%;height:auto;display:block}
             <div class="profile-sidebar">
                 <div class="profile-card">
                     <div class="profile-avatar">
-                        <img src="images/avatar-100.webp" alt="Аватар" id="avatarImg" width="100" height="100">
+                        <img src="images/avatar-100.webp" alt="Аватар пользователя на доске объявлений Board" id="avatarImg" width="100" height="100" loading="lazy">
                         <div class="avatar-overlay">
-                            <button class="avatar-edit" onclick="changePhoto()">📷</button>
+                            <button class="avatar-edit" onclick="changePhoto()" aria-label="Изменить фото профиля">📷</button>
                         </div>
                     </div>
                     <h2 class="profile-name" id="profileName">Загрузка...</h2>
@@ -130,6 +129,11 @@ img{max-width:100%;height:auto;display:block}
         </div>
     </div>
 
-    
+    <footer itemscope itemtype="https://schema.org/Organization">
+        <span itemprop="name">Board - Доска объявлений</span>
+        <meta itemprop="url" content="https://mafioz-criminal.github.io/https-Doskaobyavlenygithub.io-/">
+        <meta itemprop="description" content="Бесплатная доска объявлений в Воронеже">
+    </footer>
+
 </body>
 </html>

@@ -1,50 +1,101 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-  *{margin:0;padding:0;box-sizing:border-box}
-body{background:#f0f2f5;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#222}
-header{background:#fff;padding:15px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #e5e7eb}
-.container{max-width:1400px;margin:30px auto;padding:0 20px}
-.btn-primary{background:#00aaff;color:#fff;padding:12px 20px;border:none;border-radius:8px}
-img{max-width:100%;height:auto;display:block}
-</style>
+    <!-- SEO -->
+    <title>Подать объявление бесплатно — доска объявлений Воронеж | Board</title>
+    <meta name="description" content="Подайте объявление о продаже, покупке или услуге бесплатно. Разместите объявление за 2 минуты на доске объявлений Board в Воронеже.">
+    <link rel="canonical" href="https://mafioz-criminal.github.io/https-Doskaobyavlenygithub.io-/add.html">
 
+    <!-- Open Graph -->
+    <meta property="og:title" content="Подать объявление бесплатно — доска объявлений Воронеж">
+    <meta property="og:description" content="Разместите объявление о продаже, покупке или услуге бесплатно за 2 минуты на доске объявлений Board.">
+    <meta property="og:image" content="https://mafioz-criminal.github.io/https-Doskaobyavlenygithub.io-/images/og-image.jpg">
+    <meta property="og:url" content="https://mafioz-criminal.github.io/https-Doskaobyavlenygithub.io-/add.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
 
-<link rel="preload" href="style.min.css" as="style">
-<link rel="stylesheet" href="style.min.css" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="style.min.css"></noscript>
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Подать объявление бесплатно — Board Воронеж">
+    <meta name="twitter:description" content="Разместите объявление на доске объявлений Board в Воронеже бесплатно за 2 минуты.">
+    <meta name="twitter:image" content="https://mafioz-criminal.github.io/https-Doskaobyavlenygithub.io-/images/og-image.jpg">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png">
 
-<script src="script.min.js" defer></script>
+    <!-- Стили -->
+    <link rel="preload"  href="style.css" as="style">
+    <link rel="stylesheet"  href="style.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet"  href="style.css"></noscript>
 
+    <!-- Микроразметка: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://mafioz-criminal.github.io/https-Doskaobyavlenygithub.io-/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Подать объявление",
+          "item": "https://mafioz-criminal.github.io/https-Doskaobyavlenygithub.io-/add.html"
+        }
+      ]
+    }
+    </script>
+
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
         <div class="logo">Board</div>
-        <nav>
-            <a href="index.html">Главная</a>
-            <a href="category.html">Категории</a>
-            <a href="about.html">О сайте</a>
+        <nav aria-label="Основная навигация">
+            <a href="index.html" title="Доска объявлений Board — главная">Главная</a>
+            <a href="category.html" title="Все категории объявлений в Воронеже">Категории</a>
+            <a href="about.html" title="О проекте Board — доска объявлений">О сайте</a>
             <span id="authLinks"></span>
         </nav>
     </header>
 
     <div class="container">
+        <!-- Хлебные крошки (видимые) -->
+        <nav aria-label="breadcrumb" class="breadcrumbs">
+            <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="index.html"><span itemprop="name">Главная</span></a>
+                    <meta itemprop="position" content="1" />
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <span itemprop="name">Подать объявление</span>
+                    <meta itemprop="position" content="2" />
+                </li>
+            </ol>
+        </nav>
+
+        <h1>Подать объявление</h1>
+
         <div class="form-container">
             <h2>Добавить объявление</h2>
-            
-            <form id="addAdForm">
+
+            <form id="addAdForm" aria-label="Форма подачи объявления">
                 <div class="form-group">
                     <label for="title">Название объявления *</label>
-                    <input type="text" id="title" placeholder="Например: Продам iPhone 13" required>
+                    <input type="text" id="title" name="title" placeholder="Например: Продам iPhone 13" required>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group">
                         <label for="category">Категория *</label>
-                        <select id="category" required>
+                        <select id="category" name="category" required>
                             <option value="">Выберите категорию</option>
                             <option value="Электроника">📱 Электроника</option>
                             <option value="Недвижимость">🏠 Недвижимость</option>
@@ -59,24 +110,24 @@ img{max-width:100%;height:auto;display:block}
 
                     <div class="form-group">
                         <label for="price">Цена *</label>
-                        <input type="text" id="price" placeholder="Например: 50000 ₽" required>
+                        <input type="text" id="price" name="price" placeholder="Например: 50000 ₽" required>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="description">Описание *</label>
-                    <textarea id="description" placeholder="Подробно опишите товар или услугу..." required></textarea>
+                    <textarea id="description" name="description" placeholder="Подробно опишите товар или услугу..." required></textarea>
                 </div>
 
                 <div class="form-group">
                     <label for="image">Ссылка на фото</label>
-                    <input type="url" id="image" placeholder="https://example.com/photo.jpg">
-                    <img id="preview" class="preview-image" alt="Предпросмотр">
+                    <input type="url" id="image" name="image" placeholder="https://example.com/photo.jpg">
+                    <img id="preview" class="preview-image" alt="Предпросмотр загружаемого фото объявления">
                 </div>
 
                 <div class="form-group">
                     <label for="phone">Контактный телефон</label>
-                    <input type="tel" id="phone" placeholder="+7 (999) 123-45-67">
+                    <input type="tel" id="phone" name="phone" placeholder="+7 (999) 123-45-67">
                 </div>
 
                 <button type="submit" class="submit-btn">Опубликовать объявление</button>
@@ -84,6 +135,11 @@ img{max-width:100%;height:auto;display:block}
         </div>
     </div>
 
-    
+    <footer itemscope itemtype="https://schema.org/Organization">
+        <span itemprop="name">Board - Доска объявлений</span>
+        <meta itemprop="url" content="https://mafioz-criminal.github.io/https-Doskaobyavlenygithub.io-/">
+        <meta itemprop="description" content="Бесплатная доска объявлений в Воронеже">
+    </footer>
+
 </body>
 </html>
