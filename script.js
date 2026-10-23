@@ -1100,7 +1100,10 @@ function loadAdDetail() {
                 </div>
                 
                 <div class="ad-detail-phone">
-                    <strong>📞 Контактный телефон:</strong> ${ad.phone || 'Не указан'}
+                    <strong>📞 Контактный телефон:</strong>
+                    ${ad.phone && ad.phone !== 'Не указан' 
+                    ? `<a href="tel:${ad.phone.replace(/[^\d+]/g, '')}" onclick="ym(113743468, 'reachGoal', 'phone_click'); return true;" style="color:#00aaff; text-decoration:none; font-weight:bold;">${ad.phone}</a>` 
+                    : 'Не указан'}
                 </div>
                 
                 ${actionsHtml}
@@ -1629,6 +1632,18 @@ document.addEventListener('DOMContentLoaded', function() {
         if (typeof initEditPage === 'function') {
             initEditPage();
         }
+    }
+        // Логика для кнопки "Наверх"
+    const backToTopBtn = document.getElementById('backToTop');
+    if (backToTopBtn) {
+        window.addEventListener('scroll', function() {
+            // Если прокрутили больше 400 пикселей — показываем кнопку
+            if (window.scrollY > 400) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
     }
 });
 

@@ -31,6 +31,9 @@ body {
 
 /* Шапка сайта */
 header {
+    position: sticky; 
+    top: 0;           
+    z-index: 1000;    
     background: white;
     padding: 15px 40px;
     display: flex;
@@ -1465,5 +1468,67 @@ ol.about-list {
             color: #666;
             margin-top: 15px;
         }
+        /* ============================================
+   НОВЫЕ UX-УЛУЧШЕНИЯ (МОДУЛЬ 3)
+   ============================================ */
+
+/* Плавный скролл для всей страницы */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Стили для CTA-кнопки на главной */
+.hero-cta {
+    text-align: center;
+    margin: 20px 0 30px;
+}
+.hero-cta-btn {
+    display: inline-block;
+    font-size: 20px;
+    padding: 16px 40px;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 170, 255, 0.3);
+    transition: all 0.3s;
+}
+.hero-cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 170, 255, 0.45);
+}
+.hero-cta-hint {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #777;
+}
+
+/* Стили для кнопки "Наверх" */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: #00aaff;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 170, 255, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    z-index: 999;
+}
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+.back-to-top:hover {
+    background: #0095dd;
+    transform: translateY(-3px);
+}
 
 

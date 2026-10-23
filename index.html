@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,8 +47,27 @@
     }
     </script>
 <script src="script.js"></script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(113743468, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true,
+        trackHash:true
+    });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/113743468" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --> 
+
 </head>
-<body>
+<body id="top">
 
 <header>
     <div class="logo">Board</div>
@@ -61,6 +81,14 @@
 
 <div class="container">
     <h1>Доска объявлений в Воронеже</h1>
+
+    <!-- Новая CTA-кнопка -->
+    <div class="hero-cta">
+        <a href="add.html" class="btn-primary hero-cta-btn">
+            + Подать объявление бесплатно
+        </a>
+        <p class="hero-cta-hint">Без регистрации · За 2 минуты</p>
+    </div>
 
     <input type="text" id="searchInput" placeholder="Поиск объявлений..." oninput="search(this.value)" aria-label="Поиск объявлений">
 
@@ -80,6 +108,7 @@
     <meta itemprop="url" content="https://mafioz-criminal.github.io/https-Doskaobyavlenygithub.io-/">
     <meta itemprop="description" content="Бесплатная доска объявлений в Воронеже">
 </footer>
-
+<!-- Кнопка Наверх -->
+<a href="#top" class="back-to-top" id="backToTop" title="Наверх" aria-label="Наверх">↑</a>
 </body>
 </html>
